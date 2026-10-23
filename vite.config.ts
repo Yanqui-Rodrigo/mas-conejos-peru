@@ -2,7 +2,7 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
-export default defineConfig({
-  base: '/mas-conejos-peru/',
+export default defineConfig(({ mode }) => ({
+  base: mode === 'github-pages' ? '/mas-conejos-peru/' : '/',
   plugins: [react()],
-})
+}))

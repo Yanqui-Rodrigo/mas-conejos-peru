@@ -3,13 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://yanqui-rodrigo.github.io/mas-conejos-peru/",
+  "homepage": "https://mas-conejos-peru.rodrigollanquipe.workers.dev/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:github": "tsc -b && vite build --mode github-pages",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "preview:github": "vite preview --mode github-pages",
+    "predeploy": "npm run build:github",
     "deploy": "gh-pages -d dist --nojekyll"
   },
   "dependencies": {
